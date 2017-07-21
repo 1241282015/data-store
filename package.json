@@ -21,6 +21,9 @@
     "ts-node": "^3.2.1"
   },
   "dependencies": {
-    "@jingli/database": "^1.0.1"
+    "@jingli/database": "^1.0.1",
+    "@jingli/logger": "^1.0.1",
+    "pg": "^7.0.1",
+    "sequelize": "^4.4.0"
   }
 }

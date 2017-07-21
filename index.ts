@@ -1,6 +1,7 @@
 let database = require("@jingli/database");
-let {DB} from "@jingli/database";
 var Sequelize = require("sequelize");
+
+import {DB} from "@jingli/database";
 
 
 export function init(dbUrl:string){

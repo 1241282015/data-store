@@ -1,8 +1,7 @@
 "use strict";
 var database = require("@jingli/database");
-var DB = from.DB;
-"@jingli/database";
 var Sequelize = require("sequelize");
+var database_1 = require("@jingli/database");
 function init(dbUrl) {
     database.init(dbUrl);
 }
@@ -13,7 +12,7 @@ function data_store(schema, properties, sql) {
             throw new Error("no available sql, grammar not support yet");
         }
         try {
-            yield DB.query(sql);
+            yield database_1.DB.query(sql);
         }
         catch (err) {
             console.log(err);
@@ -42,7 +41,7 @@ function data_compare(dbCompare, dbBase, compareSql) {
          * compareSql形式为: create table place.cities1 as (select * from place.cities as pc, place.tfcities as pt where pc.name not exists
          */
         try {
-            yield DB.query(compareSql);
+            yield database_1.DB.query(compareSql);
         }
         catch (err) {
             console.log(err);
